@@ -1,0 +1,318 @@
+@import '../../../assets/fonts/fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Bounded:wght@500&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.login-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.left-section {
+  width: 60%;
+  height: 100%;
+  background-color: #FFC600;
+}
+
+.right-section {
+  width: 40%;
+  height: 100%;
+  background-color: #222222;
+}
+
+.login-container {
+  position: absolute;
+  width: 61.11%;
+  height: 600px;
+  right: 33px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #FFFFFF;
+  border-radius: 10px;
+  z-index: 1;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.login-title {
+  font-family: 'Bounded', sans-serif;
+  font-weight: 500;
+  font-size: 3.5vw;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.login-subtitle {
+  font-family: 'Bounded', sans-serif;
+  font-weight: 300;
+  font-size: 2vw;
+  margin: -10px 0 0 0;
+  padding: 0;
+  color: #000;
+  opacity: 0.7;
+}
+
+.login-form {
+  margin-top: 100px;
+  width: 61.11%;
+}
+
+.input-group {
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.input-group input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #000;
+  padding: 10px 0;
+  font-family: 'Bounded', sans-serif;
+  font-size: 1.2vw;
+  outline: none;
+  color: #000;
+}
+
+/* Стили для автозаполнения */
+.input-group input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+  -webkit-text-fill-color: #000;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.input-group input::placeholder {
+  font-family: 'Bounded', sans-serif;
+  color: #000;
+  opacity: 0.7;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+  background: #FFC600;
+  border-color: #FFC600;
+}
+
+.checkbox-group input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.checkbox-group label {
+  font-family: 'Bounded', sans-serif;
+  font-size: 1vw;
+  color: #000;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 39%;
+}
+
+.login-button {
+  font-family: 'Bounded', sans-serif;
+  font-size: 1vw;
+  color: #000;
+  background: #FFC600;
+  border: none;
+  padding: 10px 70px;
+  cursor: pointer;
+  width: fit-content;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.login-button:hover {
+  opacity: 0.8;
+}
+
+.forgot-password {
+  font-family: 'Bounded', sans-serif;
+  font-size: 1vw;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.forgot-password:hover {
+  color: #FFC600;
+  opacity: 1;
+}
+
+.right-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.error-message {
+  color: #ff0000;
+  font-family: 'Bounded', sans-serif;
+  font-size: 0.9vw;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Адаптивность для больших экранов */
+@media (min-width: 1440px) {
+  .login-container {
+    height: 600px;
+    right: 33px;
+  }
+  .login-title {
+    font-size: 50px;
+  }
+  .input-group input {
+    font-size: 18px;
+  }
+  .checkbox-group label {
+    font-size: 16px;
+  }
+  .forgot-password {
+    font-size: 16px;
+  }
+  .login-button {
+    font-size: 16px;
+    padding: 12px 48px;
+  }
+  .error-message {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .login-container {
+    height: calc(600px * 1.33);
+    right: calc(33px * 1.33);
+  }
+  .login-title {
+    font-size: 66px;
+  }
+  .input-group input {
+    font-size: 24px;
+  }
+  .checkbox-group label {
+    font-size: 20px;
+  }
+  .forgot-password {
+    font-size: 20px;
+  }
+  .login-button {
+    font-size: 20px;
+    padding: 14px 56px;
+  }
+  .error-message {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .login-container {
+    height: calc(600px * 1.78);
+    right: calc(33px * 1.78);
+  }
+  .login-title {
+    font-size: 89px;
+  }
+  .input-group input {
+    font-size: 32px;
+  }
+  .checkbox-group label {
+    font-size: 28px;
+  }
+  .forgot-password {
+    font-size: 28px;
+  }
+  .login-button {
+    font-size: 28px;
+    padding: 18px 72px;
+  }
+  .error-message {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 3600px) {
+  .login-container {
+    height: calc(600px * 2.5);
+    right: calc(33px * 2.5);
+  }
+  .login-title {
+    font-size: 125px;
+  }
+  .input-group input {
+    font-size: 45px;
+  }
+  .checkbox-group label {
+    font-size: 40px;
+  }
+  .forgot-password {
+    font-size: 40px;
+  }
+  .login-button {
+    font-size: 40px;
+    padding: 25px 100px;
+  }
+} 

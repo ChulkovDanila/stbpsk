@@ -1,0 +1,299 @@
+.home {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.home-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-page p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.admin-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FFC600;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.admin-link:hover {
+  opacity: 0.8;
+}
+
+.top-bar {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) minmax(300px, 2fr) auto auto;
+  align-items: center;
+  padding: clamp(10px, 2vw, 20px);
+  background-color: #fff;
+  gap: clamp(8px, 1vw, 16px);
+  margin-right: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: clamp(100px, 15vw, 300px);
+  grid-column: 1 / span 2;
+  font-weight: 700;
+}
+
+.working-hours {
+  color: #666;
+  font-size: clamp(14px, 1.8vw, 16px);
+}
+
+.phone-link {
+  color: #666;
+  text-decoration: none;
+  font-size: clamp(14px, 1.8vw, 16px);
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: fit-content;
+  display: inline-block;
+  padding: 2px 4px;
+}
+
+.phone-link:hover {
+  color: #FFC600;
+}
+
+.location-block {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 0.8vw, 8px);
+  cursor: pointer;
+  padding: clamp(4px, 0.8vw, 5px) clamp(8px, 1.2vw, 10px);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  grid-column: 3;
+  margin-right: clamp(-35px, 1.5vw, -35px);
+}
+
+.location-block:hover {
+  background-color: #f5f5f5;
+}
+
+.location-icon {
+  width: clamp(14px, 1.5vw, 16px);
+  height: clamp(14px, 1.5vw, 16px);
+  flex-shrink: 0;
+}
+
+.selected-city {
+  color: #666;
+  font-size: clamp(12px, 1.5vw, 14px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arrow {
+  font-size: clamp(10px, 1.2vw, 12px);
+  color: #666;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.arrow-up {
+  transform: rotate(180deg);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  margin: 20px;
+}
+
+.modal-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-header h3 {
+  margin: 0 0 15px 0;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.city-search {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.city-search::placeholder {
+  color: #999;
+}
+
+.cities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.city-item {
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #000;
+  font-size: 14px;
+}
+
+.city-item:hover {
+  background-color: #f5f5f5;
+}
+
+.city-item.selected {
+  background-color: #FFC600;
+  color: #000;
+  font-weight: 500;
+}
+
+.orders-block {
+  display: flex;
+  align-items: center;
+  gap: clamp(6px, 0.8vw, 8px);
+  margin-left: clamp(10px, 1.5vw, 20px);
+  margin-right: clamp(100px, 15vw, 300px);
+  padding: clamp(4px, 0.8vw, 5px) clamp(8px, 1.2vw, 10px);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  grid-column: 4;
+}
+
+.orders-block:hover {
+  background-color: #f5f5f5;
+}
+
+.order-icon {
+  width: clamp(14px, 1.5vw, 16px);
+  height: clamp(14px, 1.5vw, 16px);
+}
+
+.orders-link {
+  color: #666;
+  text-decoration: none;
+  font-size: clamp(12px, 1.5vw, 14px);
+}
+
+.orders-link:hover {
+  color: #666;
+}
+
+/* Адаптивный дизайн */
+@media screen and (max-width: 1600px) {
+  .contact-info {
+    padding-left: clamp(50px, 10vw, 200px);
+  }
+  
+  .orders-block {
+    margin-right: clamp(50px, 10vw, 200px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-info {
+    padding-left: clamp(30px, 5vw, 100px);
+  }
+  
+  .orders-block {
+    margin-right: clamp(30px, 5vw, 100px);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .top-bar {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .contact-info {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .location-block {
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .orders-block {
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .top-bar {
+    padding: 10px;
+  }
+
+  .working-hours,
+  .phone-link,
+  .selected-city,
+  .orders-link {
+    font-size: 12px;
+  }
+
+  .location-icon,
+  .order-icon {
+    width: 14px;
+    height: 14px;
+  }
+} 

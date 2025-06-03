@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Bounded';
+  src: url('./Bounded.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+} 
