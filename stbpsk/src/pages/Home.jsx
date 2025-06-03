@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import API_URL from '../config/api.config';
 import './Home.css';
 import locationIcon from '../assets/IconLocation.png';
 import orderIcon from '../assets/free-icon-order-history-10967216.png';
@@ -17,12 +18,12 @@ const Home = () => {
 
   const fetchPhone = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/public/phone');
+      const response = await fetch(`${API_URL}/api/public/phone`);
       if (!response.ok) {
         throw new Error('Ошибка при получении данных');
       }
       const data = await response.json();
-      console.log('Полученные данные:', data); // Для отладки
+      console.log('Полученные данные:', data);
       if (data.phone) {
         setPhone(data.phone);
       }
@@ -33,7 +34,7 @@ const Home = () => {
 
   const fetchCities = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/public/cities');
+      const response = await fetch(`${API_URL}/api/public/cities`);
       if (!response.ok) {
         throw new Error('Ошибка при получении данных');
       }
