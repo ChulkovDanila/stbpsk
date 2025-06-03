@@ -24,7 +24,7 @@ const Dashboard = () => {
   const fetchContent = async () => {
     try {
       const token = localStorage.getItem('adminToken') || sessionStorage.getItem('adminToken');
-      const response = await fetch(`${API_URL}/admin/content`, {
+      const response = await fetch(`${API_URL}/api/admin/content`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -64,7 +64,7 @@ const Dashboard = () => {
 
     try {
       const token = localStorage.getItem('adminToken') || sessionStorage.getItem('adminToken');
-      const response = await fetch(`${API_URL}/admin/content/phone`, {
+      const response = await fetch(`${API_URL}/api/admin/content/phone`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ const Dashboard = () => {
 
     if (value.length >= 2) {
       try {
-        const response = await fetch(`${API_URL}/cities/search?query=${encodeURIComponent(value)}`);
+        const response = await fetch(`${API_URL}/api/cities/search?query=${encodeURIComponent(value)}`);
         const data = await response.json();
         setSuggestions(data);
         setShowSuggestions(true);
@@ -132,7 +132,7 @@ const Dashboard = () => {
       const token = localStorage.getItem('adminToken') || sessionStorage.getItem('adminToken');
       console.log('Отправляем города:', cities);
       
-      const response = await fetch(`${API_URL}/admin/content/cities`, {
+      const response = await fetch(`${API_URL}/api/admin/content/cities`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
