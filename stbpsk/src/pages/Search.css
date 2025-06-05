@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Bounded';
+  src: url('../assets/fonts/Bounded.ttf') format('truetype');
+}
+
+.search {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  font-family: 'Bounded', sans-serif;
+}
+
+.catalog-container {
+  padding-top: 20px;
+}
+
+.catalog-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #FFC600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 15%;
+  font-family: 'Bounded', sans-serif;
+  font-size: 18px;
+  color: #000;
+  transition: opacity 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  outline: none;
+}
+
+.catalog-button:hover {
+  opacity: 0.8;
+}
+
+.catalog-button:active {
+  opacity: 1;
+}
+
+.catalog-button:focus {
+  outline: none;
+}
+
+.catalog-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.like-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+} 
